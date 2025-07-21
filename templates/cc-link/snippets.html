@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from debtdeath.neocities.org/templates/cc-link/snippets by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jul 2025 17:42:26 GMT -->
+<head>
+
+<!-- 
+
+                      CC-LINK
+
+      /// A WEBSITE TEMPLATE BY CC DEBTDEATH \\\
+
+          https://debtdeath.neocities.org/
+
+ -->
+
+  <!-- regular ol' html meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- change this to your site title! this is the text on the browser tab -->
+  <title>CC-LINK TEMPLATE</title>
+
+  <!-- meta tags for site previews and social media, change this to be yours! -->
+  <meta name="description" content="a website template">
+  <meta name="author" content="cc">
+
+  <!-- you can make a 32x32px .png and convert it to .ico at https://favicon.io/ -->
+  <link rel="icon" href="../../favicon.ico">
+
+  <!-- stylesheet -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+
+<style>
+  .preview-frame pre {
+    margin: 12px auto;
+    max-height: 200px;
+    max-width: calc(100% - 2em);
+  }
+
+  .preview-frame a img {
+    object-fit: cover;
+    object-position: left;
+  }
+</style>
+
+<body>
+
+  <!-- header that only shows up on mobile -->
+  <header class="mobile-only">
+    <!-- you can replace the <p> contents with an emoji if you want -->
+    <div><p>///</p></div>
+    <!-- this takes you back to the homepage -->
+    <div><a href="index.html">home</a></div>
+    <!-- this links to the menu -->
+    <div><a href="#menu">menu</a></div>
+  </header>
+
+  <!-- main content of the page -->
+  <main>
+
+    <div class="sidebar"> 
+      <!-- sidebar menu. in mobile-view, this moves to the end of the page. -->
+      <nav id="menu">
+        <a href="index.html" class="category">home</a>
+        <a href="download.html" class="category">download</a>
+        <details>
+          <summary class="category">documentation</summary>
+            <div class="tree-view">
+              <ul>
+                <li><a href="manual.html">manual</a></li>
+                <li><a href="styleguide.html">styleguide</a></li>
+              </ul>
+            </div>
+        </details>
+        <details>
+          <summary class="category">snippets</summary>
+            <div class="tree-view">
+              <ul>
+                <li><a href="snippets.html#palettes">colour palettes</a></li>
+                <li><a href="snippets.html#HTML-comment-box">HTML comment box</a></li>
+                <li><a href="snippets.html#status-cafe">status.cafe</a></li>
+              </ul>
+            </div>
+        </details>
+        <a href="about.html" class="category">about</a>
+        <a href="faq.html" class="category">FAQ</a>
+      </nav>
+      <div class="widget">
+        <p>Let me know if you're running into any issues with the template.</p>
+        <a href="mailto:debtdeath69+cclink@gmail.com" class="button">Contact</a>
+      </div>
+    </div>
+
+    <div class="content">
+      <section>
+        <h1>Snippets</h1>
+        <p>Here are bits of extra code. Some of these I use on my website, some others I'm just putting up just because!</p>
+
+        <p><b>Note:</b> These are pretty experimental and may require some level of CSS knowledge to make them work on every website that uses CC-LINK templates. They <i>should</i> look good but you may run into weird bugs I don't know about!</p>
+      </section>
+
+      <section id="palettes">
+        <h1>Colour palettes</h1>
+        <p>Here's a selection of colour palettes you can use. Copy the code for the palette of your choice and replace the entire :root selector.</p>
+
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/tequilasunset.png"></a>
+          <div>
+            <h3>Tequila Sunset</h3>
+            <p>Code:</p>
+            <pre>:root {
+  /* column widths */
+  --widthSidebar: 200px;
+  --widthContent: 800px;
+
+  /* general page and text colours */
+  --colorBackground: #1e081d;
+  --colorText: #f4baa4;
+  --colorLink: #ff6490;
+
+  /* accent colours */
+  --colorPrimary: #ff6490;
+  --colorSecondary: #ff7726;
+  --colorTertiary: #233e38;
+
+  /* border and box shadow colours */ 
+  --colorBorder: #ff4500;
+  --colorShadow: #ff4500;
+
+  /* background colour for the sections */
+  --colorBackgroundMain: #1e081d;
+
+  /* fonts */
+  --fontText: 'DM Mono', sans-serif;
+  --fontTitle: 'w95fa', monospace;
+
+  /* borders */
+  --borderSolid: 1px solid #ff4500;
+  --borderDotted: 1px dotted #ff4500;
+  --borderTree: 1px solid #ff4500;
+
+  /* gallery settings */
+  --columnCount: 2;
+  --columnGap: 8px;
+
+  /* background image FOR ALL PAGES */
+  --imageBackground: none;
+}</pre>
+          </div>
+        </div>
+
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/deepsea.png"></a>
+          <div>
+            <h3>Deep Sea</h3>
+            <p>Code:</p>
+            <pre>:root {
+  /* column widths */
+  --widthSidebar: 200px;
+  --widthContent: 800px;
+
+  /* general page and text colours */
+  --colorBackground: #191330;
+  --colorText: #8ba8a2;
+  --colorLink: #28b196;
+
+  /* accent colours */
+  --colorPrimary: #28b196;
+  --colorSecondary: #f99b36;
+  --colorTertiary: #233e38;
+
+  /* border and box shadow colours */ 
+  --colorBorder: #8ba8a2;
+  --colorShadow: #8ba8a2;
+
+  /* background colour for the sections */
+  --colorBackgroundMain: #191330;
+
+  /* fonts */
+  --fontText: 'DM Mono', sans-serif;
+  --fontTitle: 'w95fa', monospace;
+
+  /* borders */
+  --borderSolid: 1px solid #8ba8a2;
+  --borderDotted: 1px dotted #8ba8a2;
+  --borderTree: 1px solid #8ba8a2;
+
+  /* gallery settings */
+  --columnCount: 2;
+  --columnGap: 8px;
+
+  /* background image FOR ALL PAGES */
+  --imageBackground: none;
+}</pre>
+          </div>
+        </div>
+
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/ghostlymonitor.png"></a>
+          <div>
+            <h3>Ghostly Monitor</h3>
+            <p>Code:</p>
+            <pre>:root {
+  /* column widths */
+  --widthSidebar: 200px;
+  --widthContent: 800px;
+
+  /* general page and text colours */
+  --colorBackground: #bbd6b3;
+  --colorText: #1d012c;
+  --colorLink: #836593;
+
+  /* accent colours */
+  --colorPrimary: #836593;
+  --colorSecondary: #73289b;
+  --colorTertiary: #3e0f57;
+
+  /* border and box shadow colours */ 
+  --colorBorder: #1d012c;
+  --colorShadow: #1d012c;
+
+  /* background colour for the sections */
+  --colorBackgroundMain: #bbd6b3;
+
+  /* fonts */
+  --fontText: 'DM Mono', sans-serif;
+  --fontTitle: 'w95fa', monospace;
+
+  /* borders */
+  --borderSolid: 1px solid #1d012c;
+  --borderDotted: 1px dotted #1d012c;
+  --borderTree: 1px solid #1d012c;
+
+  /* gallery settings */
+  --columnCount: 2;
+  --columnGap: 8px;
+
+  /* background image FOR ALL PAGES */
+  --imageBackground: none;
+}</pre>
+          </div>
+        </div>
+
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/nevermind.png"></a>
+          <div>
+            <h3>Never Mind</h3>
+            <p>Code:</p>
+            <pre>:root {
+  /* column widths */
+  --widthSidebar: 200px;
+  --widthContent: 800px;
+
+  /* general page and text colours */
+  --colorBackground: #f96ea2;
+  --colorText: #c6136c;
+  --colorLink: #ffefc8;
+
+  /* accent colours */
+  --colorPrimary: #ff69b4;
+  --colorSecondary: #1a5a8e;
+  --colorTertiary: #041d31;
+
+  /* border and box shadow colours */ 
+  --colorBorder: #ffc334;
+  --colorShadow: #ffc334;
+
+  /* background colour for the sections */
+  --colorBackgroundMain: #f09fc8;
+
+  /* fonts */
+  --fontText: 'DM Mono', sans-serif;
+  --fontTitle: 'w95fa', monospace;
+
+  /* borders */
+  --borderSolid: 1px solid #ffc334;
+  --borderDotted: 1px dotted #ffc334;
+  --borderTree: 1px solid #ffc334;
+
+  /* gallery settings */
+  --columnCount: 2;
+  --columnGap: 8px;
+
+  /* background image FOR ALL PAGES */
+  --imageBackground: none;
+}</pre>
+          </div>
+        </div>
+
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/astralracing.png"></a>
+          <div>
+            <h3>Astral Racing</h3>
+            <p>Code:</p>
+            <pre>:root {
+  /* column widths */
+  --widthSidebar: 200px;
+  --widthContent: 800px;
+
+  /* general page and text colours */
+  --colorBackground: #092b47;
+  --colorText: #bbc162;
+  --colorLink: #f4f7d4;
+
+  /* accent colours */
+  --colorPrimary: #f4f7d4;
+  --colorSecondary: #1a5a8e;
+  --colorTertiary: #041d31;
+
+  /* border and box shadow colours */ 
+  --colorBorder: #bbc162;
+  --colorShadow: #bbc162;
+
+  /* background colour for the sections */
+  --colorBackgroundMain: #092b47;
+
+  /* fonts */
+  --fontText: 'DM Mono', sans-serif;
+  --fontTitle: 'w95fa', monospace;
+
+  /* borders */
+  --borderSolid: 1px solid #bbc162;
+  --borderDotted: 1px dotted #bbc162;
+  --borderTree: 1px solid #bbc162;
+
+  /* gallery settings */
+  --columnCount: 2;
+  --columnGap: 8px;
+
+  /* background image FOR ALL PAGES */
+  --imageBackground: none;
+}</pre>
+          </div>
+        </div>
+
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/fadedterminal.png"></a>
+          <div>
+            <h3>Faded Terminal</h3>
+            <p>Code:</p>
+            <pre>:root {
+  /* column widths */
+  --widthSidebar: 200px;
+  --widthContent: 800px;
+
+  /* general page and text colours */
+  --colorBackground: #343b33;
+  --colorText: #c4f8c2;
+  --colorLink: #86b57f;
+
+  /* accent colours */
+  --colorPrimary: #86b57f;
+  --colorSecondary: #4e7748;
+  --colorTertiary: #233e38;
+
+  /* border and box shadow colours */ 
+  --colorBorder: #c4f8c2;
+  --colorShadow: #c4f8c2;
+
+  /* background colour for the sections */
+  --colorBackgroundMain: #222821;
+
+  /* fonts */
+  --fontText: 'DM Mono', sans-serif;
+  --fontTitle: 'w95fa', monospace;
+
+  /* borders */
+  --borderSolid: 1px solid #c4f8c2;
+  --borderDotted: 1px dotted #c4f8c2;
+  --borderTree: 1px solid #c4f8c2;
+
+  /* gallery settings */
+  --columnCount: 2;
+  --columnGap: 8px;
+
+  /* background image FOR ALL PAGES */
+  --imageBackground: none;
+}</pre>
+          </div>
+        </div>
+
+      </section>
+
+      <section id="HTML-comment-box">
+        <h1>HTML Comment Box</h1>
+        <p>This is a stylesheet for the <a href="https://www.htmlcommentbox.com/" >HTML Comment Box</a>, which you can use for guestbooks and other comment sections on your website.</p>
+
+        <div style="text-align: center; padding: 16px 0">
+          <a href="snippets/commentbox.css"  class="button">Download Snippet</a>
+        </div>
+
+        <h2>How to Use</h2>
+        <ol>
+          <li>Download the snippet and sign up to HTML Comment Box.</li>
+          <li>Move the file named <b>commentbox.css</b> from your downloads into your website's <b>css folder</b>.</li>
+          <li>Paste the following line of code in your page's &lt;head&gt;:
+            <pre>&lt;link&nbsp;rel=&quot;stylesheet&quot;&nbsp;type=&quot;text/css&quot;&nbsp;href=&quot;css/commentbox.css&quot;&nbsp;/&gt;</pre></li>
+          <li>After signing up to HTML Comment Box, before copying the code, click on <b>+options</b> on the top-right (next to where it says Quick Install) and select "Unstyled" in the "HTML Comment Box Skin" field, and paste whatever URL you want this comment box to exist on in the "Webpage Url" field.</li>
+          <li>Copy the generated HTML code, and paste it in your page.</li>
+          <li>Your comment box should be nicely styled now!</li>
+        </ol>
+      </section>
+
+      <section id="status-cafe">
+        <h1>Status Cafe widget</h1>
+        <p>This is a tiny stylesheet for <a href="https://status.cafe/" >status.cafe widgets</a>. I love status.cafe! It's a small micro-blogging space to post status. A lot of the users are neocities website hobbyists too which rocks.</p>
+
+        <div style="text-align: center; padding: 16px 0">
+          <a href="snippets/status-cafe.css"  class="button">Download Snippet</a>
+        </div>
+
+        <h2>How to Use</h2>
+        <ol>
+          <li>Download the snippet and sign up for status.cafe if you haven't yet.</li>
+          <li>Move the file named <b>status-cafe.css</b> from your downloads into your website's <b>css folder</b>.</li>
+          <li>Paste the following line of code in your page's &lt;head&gt;:
+            <pre>&lt;link&nbsp;rel=&quot;stylesheet&quot;&nbsp;type=&quot;text/css&quot;&nbsp;href=&quot;css/status-cafe.css&quot;&nbsp;/&gt;</pre></li>
+          <li>After signing up to status.cafe, grab their <a href="https://status.cafe/current-status" >status widget HTML code</a> and paste it where you want it on your site.</li>
+          <li>Your status should be nicely styled now! Feel free to tweak the CSS if you're feeling up for it.</li>
+        </ol>
+      </section>
+
+    </div>
+
+  </main>
+
+  <footer>
+    <p>debtdeath / 2023</p><p><a href="sitemap.html">sitemap</a></p>
+    <p class="template-credits"><a href="../../templates.html">TEMPLATE: (C) CC-LINK</a></p>
+  </footer>
+</body>
+
+<!-- Mirrored from debtdeath.neocities.org/templates/cc-link/snippets by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jul 2025 17:42:29 GMT -->
+</html>

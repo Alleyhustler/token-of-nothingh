@@ -1,0 +1,176 @@
+#HCB_comment_box h3 {
+    margin-bottom: 8px;
+    display:none;
+}
+
+
+
+#HCB_comment_box textarea {
+  /* add any custom CSS for the comment box here. */
+  
+}
+
+/* the entire html comment box container. applies to everything */
+#HCB_comment_box {
+  font-family: var(--fontText);
+}
+
+#HCB_comment_box p.error {
+  border: 1px solid red;
+  background-color: #fee;
+}
+
+.hcb-mod b {
+    color:#DD3344;
+}
+
+#HCB_comment_box #hcb_form textarea, #HCB_comment_box #hcb_form #hcb_form_name, #HCB_comment_box #hcb_form #hcb_form_website, #HCB_comment_box #hcb_form #hcb_form_email {
+    -webkit-appearance: none;
+    -webkit-text-fill-color: var(--colorText);
+    color: var(--colorText);
+    font-family: var(--fontText);
+    font-size: 14px;
+    padding: 8px;
+    background-color: transparent;
+    border: var(--borderSolid);
+    width: 100%;
+}
+
+#HCB_comment_box #HCB_comment_form_box {
+    border-bottom: var(--borderDotted);
+}
+
+.hcb-wrapper > #hcb_form_name_container {
+	width: 100%;
+}
+
+#HCB_comment_box #hcb_form #hcb_form_name_container {
+  margin-right: 8px;
+}
+
+#hcb_form {
+	margin-left: 8px;
+}
+
+#hcb_form > div {
+	display: flex;
+	justify-content: center;
+}
+
+#HCB_comment_box .hcb-wrapper-half {
+    display:block;
+    width:50%;
+    float:left;
+}
+#HCB_comment_box .hcb-wrapper {
+    clear:both;
+}
+
+/* the submit button */
+#HCB_comment_box input.submit, #HCB_comment_box #hcb_form .btn, #HCB_comment_box #HCB_comment_form_box .btn {
+  border: var(--borderSolid);
+  background-color: var(--colorPrimary);
+  color: var(--colorText);
+  font-family: var(--fontTitle);
+  font-weight:bold;
+  cursor:pointer;
+  padding: 12px;
+  box-shadow: 0.5em 0.5em var(--colorBorder);
+  border-radius: 2em;
+}
+
+#HCB_comment_box input.submit:hover{
+	background-color: var(--colorBorder);
+	color: var(--colorBackground);
+	box-shadow: none;
+	transform: translate(0.5em,0.5em);
+}
+
+.admin-link {
+	margin-left: 1em;
+}
+
+#HCB_comment_box #hcb_form .hcb-door-out {
+    width: 16px;
+}
+#HCB_comment_box #hcb_form .hcb-door-in {
+    width: 16px;
+}
+
+#HCB_comment_box .home-desc {
+	font-size: 12px;
+    text-transform: lowercase;
+    text-align: left;
+    display: flex;
+    flex-flow: row;
+    align-items: baseline;
+}
+
+#HCB_comment_box span.home-desc {
+  opacity:1;
+}
+
+#HCB_comment_box #hcb_form .home-desc a, #HCB_comment_box .home-desc a:visited {
+    color: var(--colorTertiary);
+    text-decoration: none;
+}
+
+/* the individual comment display containers */
+#HCB_comment_box div.comment {
+  border-bottom: var(--borderDotted);
+  margin-bottom:8px;
+  padding: 8px 0;
+}
+
+#HCB_comment_box #comments_list {
+    padding: 0;
+    max-height: 100vh;
+}
+
+#HCB_comment_box .date {
+    color: var(--colorTertiary);
+}
+
+#HCB_comment_box .hcb-comment-tb {
+    text-align: center;
+}
+
+#HCB_comment_box .hcb-comment-tb button{
+    color: var(--colorTertiary);
+    font-family: var(--fontText);
+    text-transform: uppercase;
+}
+
+/* the moderator message */
+.hcb-mod  i{
+  color:darkblue;
+}
+
+#HCB_comment_box img {
+    width: 16px;
+}
+
+/*file input i dont want this lol */
+
+#HCB_comment_box input[type="file"]{
+    display:none;
+}
+#HCB_comment_box input.inputfile{
+    width:.1px;
+    height:.1px;
+    opacity:0;
+    overflow:hidden;
+    position:absolute;
+    z-index:-1
+}
+#HCB_comment_box input.inputfile+label {
+    display: none;
+}
+
+/* rss feed icon is hidden */
+
+#HCB_comment_box > a {
+    display: none;
+}
+
+#HCB_comment_box

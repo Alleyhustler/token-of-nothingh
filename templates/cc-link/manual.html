@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+
+<!-- Mirrored from debtdeath.neocities.org/templates/cc-link/manual by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jul 2025 17:42:24 GMT -->
+<head>
+
+<!-- 
+
+                      CC-LINK
+
+      /// A WEBSITE TEMPLATE BY CC DEBTDEATH \\\
+
+          https://debtdeath.neocities.org/
+
+ -->
+
+  <!-- regular ol' html meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- change this to your site title! this is the text on the browser tab -->
+  <title>MANUAL / CC-LINK</title>
+
+  <!-- meta tags for site previews and social media, change this to be yours! -->
+  <meta name="description" content="a website template">
+  <meta name="author" content="cc">
+
+  <!-- you can make a 32x32px .png and convert it to .ico at https://favicon.io/ -->
+  <link rel="icon" href="../../favicon.ico">
+
+  <!-- stylesheet -->
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+
+  <style>
+    details.how-it-works {
+      padding: 8px 0;
+      border: var(--borderSolid);
+    }
+
+    .selector {
+      color: #FAB972;
+    }
+
+    .property {
+      color: #813162;
+    }
+
+    .value {
+      color: #316281;
+    }
+
+    div#toc {
+      width: calc(var(--widthSidebar) + 4em);
+      background: var(--colorBackgroundMain);
+      border: var(--borderSolid);
+      position: -webkit-fixed; /* Safari */
+      position: fixed;
+      top: 2em;
+      right: 2em;
+      padding: 8px;
+    }
+
+    @media screen and (max-width: 600px) {
+      div#toc {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <header class="mobile-only">
+    <div><p>///</p></div>
+    <div><a href="index.html">home</a></div>
+    <div><a href="#menu">menu</a></div>
+  </header>
+
+  <main>
+
+    <div class="sidebar"> 
+      <!-- sidebar menu. in mobile-view, this moves to the end of the page. -->
+      <nav id="menu">
+        <a href="index.html" class="category">home</a>
+        <a href="download.html" class="category">download</a>
+        <details>
+          <summary class="category">documentation</summary>
+            <div class="tree-view">
+              <ul>
+                <li><a href="manual.html">manual</a></li>
+                <li><a href="styleguide.html">styleguide</a></li>
+              </ul>
+            </div>
+        </details>
+        <details>
+          <summary class="category">snippets</summary>
+            <div class="tree-view">
+              <ul>
+                <li><a href="snippets.html#palettes">colour palettes</a></li>
+                <li><a href="snippets.html#HTML-comment-box">HTML comment box</a></li>
+                <li><a href="snippets.html#status-cafe">status.cafe</a></li>
+              </ul>
+            </div>
+        </details>
+        <a href="about.html" class="category">about</a>
+        <a href="faq.html" class="category">FAQ</a>
+      </nav>
+      <div class="widget">
+        <p>Let me know if you're running into any issues with the template.</p>
+        <a href="mailto:debtdeath69+cclink@gmail.com" class="button">Contact</a>
+      </div>
+    </div>
+
+    <div id="toc">
+      <details>
+        <summary><h3 style="display: inline;">Table of Contents</h3></summary>
+        <ol>
+          <li><a href="#template-layout">Template layout</a></li>
+          <br>
+          <li>Global style customisation
+            <ol style="list-style-type:lower-latin;">
+              <li><a href="#css-basics">CSS basics</a></li>
+              <li><a href="#customise-template">Customising the template</a></li>
+              <li><a href="#background-images">Customise background images</a></li>
+            </ol>
+          </li>
+          <br>
+          <li>Using this template's features
+          <ol style="list-style-type:lower-latin;">
+            <li><a href="#features-basics">Features basics</a></li>
+            <li><a href="#half-width-sections">Half-width sections</a></li>
+            <li><a href="#layouts">In-section text/image layouts</a></li>
+            <li><a href="#preview-frame">Preview frame</a></li>
+            <li><a href="#image-grid">Image grid/gallery</a></li>
+            <li><a href="#lists">Lists</a></li>
+          </ol>
+          </li>
+        </ol>
+      </details>
+    </div>
+    
+    <div class="content">
+      <section>
+        <h1>Manual</h1>
+        <p>This is a manual for the template. I tried to be as thorough as possible, but if anything is unclear, let me know!</p>
+
+        <h3>Table of Contents</h3>
+        <ol>
+          <li><a href="#template-layout">Template layout</a></li>
+          <br>
+          <li>Global style customisation
+            <ol style="list-style-type:lower-latin;">
+              <li><a href="#css-basics">CSS basics</a></li>
+              <li><a href="#customise-template">Customising the template</a></li>
+              <li><a href="#background-images">Customise background images</a></li>
+            </ol>
+          </li>
+          <br>
+          <li>Using this template's features
+          <ol style="list-style-type:lower-latin;">
+            <li><a href="#features-basics">Features basics</a></li>
+            <li><a href="#half-width-sections">Half-width sections</a></li>
+            <li><a href="#layouts">In-section text/image layouts</a></li>
+            <li><a href="#preview-frame">Preview frame</a></li>
+            <li><a href="#image-grid">Image grid/gallery</a></li>
+            <li><a href="#lists">Lists</a></li>
+          </ol>
+          </li>
+        </ol>
+      </section>
+
+      <section id="template-layout">
+        <h1>Template layout</h1>
+        <p>Before we begin, let's get familiar with how the template's HTML is constructed.</p>
+        <p>The <b>&#60;head&#62;</b> is where you'll be changing your <b>&#60;title&#62;</b> (please do this) for the website, meta tags for site previews (optional but recommended), favicon (optional), linking any extra stylesheets or scripts.</p>
+        <p>The <b>&#60;body&#62;</b> is where all the actual visible content of your HTML page lives, and that's the one you'll be changing the most.</p>
+        <p>There are 3 main parts in the <b>&#60;body&#62;</b> of this template:</p>
+        <ul>
+          <li><b>&#60;header&#62;</b>: The header is only visible on mobile. It's for navigation.</li>
+          <li><b>&#60;main&#62;</b>: This is what you'll be tinkering with the most.</li>
+          <li><b>&#60;footer&#62;</b>: The little strip at the bottom of the page.</li>
+        </ul>
+        <p>Within <b>&#60;main&#62;</b>, there are two columns:</p> 
+        <ul>
+          <li>A sidebar column <b>&#60;div class="sidebar"&#62;</b>, which contains:</li>
+            <ul>
+              <li>The nav bar <b>&#60;nav id="menu"&#62;</b>, that's your main navigation.</li>
+              <li>Any widget <b>&#60;div class="class"&#62;</b> you want to add.</li>
+            </ul>
+          <li>A content column <b>&#60;div class="content"&#62;</b>, which contains:</li>
+            <ul>
+              <li>Sections <b>&#60;section&#62;</b>, where all your actual website content lives.</li>
+            </ul>
+        </ul>
+        <p>This is what it looks like on desktop, visually:</p>
+        <img src="img/layout.jpg">
+      </section>
+
+      <section id="css-basics">
+        <h1>CSS Basics</h1>
+        <p>I'm not <i>really</i> going to explain how CSS works in this section. If you're completely new to CSS, I suggest you check out <a href="https://www.w3schools.com/css/default.asp" >W3 Schools' introduction</a> to it. Even as someone who's definitely not new to it, I often end up looking through W3's references because it's easy to forget how things work.</p>
+        <p>Something basic I want to refresh us all on is the <a href="https://www.w3schools.com/css/css_syntax.asp" >CSS syntax</a>, because I'll be talking about <span class="selector">selectors</span>, <span class="property">properties</span> and <span class="value">values</span> a lot.</p>
+        <p>In this example:</p>
+<pre><span class="selector">p</span> {
+  <span class="property">color</span>: <span class="value">red</span>;
+  <span class="property">text-align</span>: <span class="value">center</span>;
+}</pre>
+        <ul>
+          <li><span class="selector">p</span> is a <span class="selector">selector</span> in CSS (it points to the HTML element you want to style: &#60;p&#62;).</li>
+          <li><span class="property">color</span> is a <span class="property">property</span>, and <span class="value">red</span> is the <span class="value">property value</span></li>
+          <li><span class="property">text-align</span> is a <span class="property">property</span>, and <span class="value">center</span> is the <span class="value">property value</span></li>
+        </ul>
+        <p>Now we're ready to customise!</p>
+      </section>
+
+      <section id="customise-template">
+        <h1>Customising the template</h1>
+        <p>Unless you're looking to add or change something specific in the template, pretty much the only CSS you'll be looking at and tinkering with is the <span class="selector">:root selector</span>, which is the first thing you see when you open the <b>style.css document</b> and looks like this:</p>
+
+<pre >
+/* root settings */
+
+<span class="selector">:root</span> {
+
+  /* column widths */
+  <span class="property">--widthSidebar</span>: <span class="value">200px</span>;
+  <span class="property">--widthContent</span>: <span class="value">800px</span>;
+
+  /* general page and text colours */
+  <span class="property">--colorBackground</span>: <span class="value">#020605</span>;
+  <span class="property">--colorText</span>: <span class="value">#f2ead4</span>;
+  <span class="property">--colorLink</span>: <span class="value">#318150</span>;
+
+  /* accent colours */
+  <span class="property">--colorPrimary</span>: <span class="value">#318150</span>;
+  <span class="property">--colorSecondary</span>: <span class="value">#f99b36</span>;
+  <span class="property">--colorTertiary</span>: <span class="value">#24211c</span>;
+
+  /* border and box shadow colours */ 
+  <span class="property">--colorBorder</span>: <span class="value">#f2ead4</span>;
+  <span class="property">--colorShadow</span>: <span class="value">#f2ead4</span>;
+
+  /* background colour for the sections */
+  <span class="property">--colorBackgroundMain</span>: <span class="value">#020605</span>;
+
+  /* fonts */
+  <span class="property">--fontText</span>: <span class="value">'DM Mono', sans-serif</span>;
+  <span class="property">--fontTitle</span>: <span class="value">'w95fa', monospace</span>;
+
+  /* borders */
+  <span class="property">--borderSolid</span>: <span class="value">1px solid #f2ead4</span>;
+  <span class="property">--borderDotted</span>: <span class="value">1px dotted #f2ead4</span>;
+  <span class="property">--borderTree</span>: <span class="value">1px solid #f2ead4</span>;
+
+  /* gallery settings */
+  <span class="property">--columnCount</span>: <span class="value">2</span>;
+  <span class="property">--columnGap</span>: <span class="value">8px</span>;
+
+  /* background image FOR ALL PAGES */
+  <span class="property">--imageBackground</span>: <span class="value">url('../img/background.png')</span>;
+}</pre>
+
+        <p>Most of the <span class="value">values</span> are colours, which should be easy to figure out.</p>
+        <p>Experiment with changing the <span class="value">values</span>, see what happens! Just don't change the <span class="property">properties</span>, or it'll break the code!</p>
+        <details class="how-it-works">
+          <summary>How it works</summary>
+          <p>This template uses CSS variables. By first declaring custom variables in the <span class="selector">:root selector</span> and using the <span class="value">var() function</span> as a <span class="value">value</span> in other places of the stylesheet, you can effortlessly change the <span class="value">value</span> wherever the <span class="value">var() function</span> is used, by changing the value in the <span class="property">property</span> declared in <span class="selector">:root</span>.</p>
+          <p>W3 Schools' page on <a href="https://www.w3schools.com/css/css3_variables.asp">CSS variables</a> is a great resource if you want to understand exactly what this all means.</p>
+          <p>You can see where all these variables are used throughout the CSS, if you're curious.</p>
+        </details>
+        <p><b>Note:</b> If you're self-hosting your fonts, make sure you've included them in the CSS stylesheet using the <a href="https://www.w3schools.com/cssref/css3_pr_font-face_rule.php" >@font-face rule</a> before changing the fonts settings!</p> 
+        <p><b>Hot tip:</b> If you're unsure or uninspired re: colour palettes, I made a few <a href="snippets.html#palettes" >palettes</a> you can use or base your own off.</p>  
+      </section>
+
+      <section id="background-images">
+        <h1>Customise background images</h1>
+        <p>Now that you're familiar with the <span class="selector">:root selector</span>, you can see that one of the variable <span class="property">properties</span> is called <span class="property">--imageBackground</span>.</p>
+
+        <pre><span class="property">--imageBackground</span>: <span class="value">url('../img/background.png')</span>;</pre>
+
+        <p>You can change the url to be any image you want, just make sure the <a href="https://www.w3schools.com/Html/html_filepaths.asp">file path</a> is correct.</p>
+
+        <p>If you don't want any backgrounds, just the solid colour you've defined at <span class="property">--colorBackground</span>, change the <span class="value">value</span> to <span class="value">none</span>, like so:</p>
+
+        <pre><span class="property">--imageBackground</span>: <span class="value">none</span>;</pre>
+
+        <p>This applies the same background (or lackthereof) to all pages.</p>
+        <hr>
+        <p>To have a different background on a given page, here's what to do:</p>
+        <ul>
+          <li>In the HTML file of the page you want a different background on, there is a &#60;style&#62; tag within the head tag.</li>
+          <li>Add this in the &#60;style&#62; tag:
+            <pre><span class="selector">:root</span> {
+  <span class="property">--imageBackground</span>: <span class="value">url('../img/YOUR-OTHER-BACKGROUND.png')</span>;
+}</pre>
+          <li>That should override the global <span class="property">--imageBackground property</span>, and you'll have YOUR-OTHER-BACKGROUND.jpg as your background on this page, and this page only!</li>
+          </li>
+        </ul>
+        <hr>
+        <p><b>Important Note:</b> This goes for any image you feature on your website, but please don't make your background image too big! If your image file size is too big, it takes way too long to load on people's devices and makes for an unpleasant experience.</p>
+        <p>This is a fairly arbitrary limit but I'd say your background image's size should be <b>under 1MB</b>, with a <b>maximum width of 2160px</b> (that's 4k resolution, although tbh you don't even need to go that big. 1920px in width is usually just as good.)</p>
+      </section>
+
+      <section id="features-basics">
+        <h1>Features basics</h1>
+        <p>All the features in this template are made in pure HTML. I've extensively <b>&#60;!-- commented --&#62;</b> the HTML pages so even if you're a beginner, you should be able to get your bearings and figure it all out easily.</p>
+        <p>In the sections below I'll be presenting these features and a boilerplate for you to easily copy and paste into your own HTML pages.</p>
+      </section>
+
+      <section id="half-width-sections">
+        <h1>Half-width-sections</h1>
+        <p>By default, sections in this template are full-width, which means they occupy the entire space they have in the content column.</p>
+        <p>You can change the class of the sections to make them half-width, which is nice if you want to have little bits of text or images here and there on your website.</p>
+      </section>
+
+      <div class="half-width">
+        <section>
+          <h2>Half-width section / Example A</h2>
+          <p>Here's a live example of what half-width sections look like. You can use them for little things, like quotes, status updates, or displaying a favourite song/album.</p>
+          <p><b>Note:</b> On mobile view, half-width sections stack on top of each other.</p>
+        </section>
+        <section>
+          <h2>Half-width section / Example B</h2>
+          <img src="img/imagetest-16-9.jpg">
+          <p>You can insert images too! The cool thing is that your two sections will always have matching heights regardless of content.</p>
+        </section>
+      </div>
+      <section>
+        <h2>Boilerplate</h2>
+        <p>Copy/Paste this bit of code into your <b>&#60;div class="content"&#62;</b> tag to create 2 half-width sections in your website, then fill with your own content.</p>
+        <pre>
+&#60;div class="half-width"&#62;
+  &#60;section&#62;
+    &#60;h2&#62;Title&#60;/h2&#62;
+  &#60;/section&#62;
+  &#60;section&#62;
+    &#60;h2&#62;Title&#60;/h2&#62;
+  &#60;/section&#62;
+&#60;/div&#62;</pre>
+      </section>
+
+      <section id="layouts">
+        <h1>In-section text/image layouts</h1>
+        <p>Sometimes you want to spice up your sections and have images next to a paragraph in a ~tasteful~ way...</p>
+          <div class="flex-columns">
+            <div class="flex-text">
+              <p>You can use a simple column-based layout to have images on the right...</p>
+            </div>
+            <div class="flex-image">
+              <img src="img/imagetest-square.jpg">
+            </div>
+            <div class="flex-image">
+              <img src="img/imagetest-square.jpg">
+            </div>
+            <div class="flex-text">
+              <p>Or on the left.</p>
+              <p>I used this layout for my about page, and I think it'd work for any page where you want to display both images and text in a ~cool~ way fairly effortlessly.</p>
+            </div>
+          </div>
+          <p><b>Note:</b> This layout collapses and the columns stack on top of each other on mobile view.</p>
+
+          <h2>Boilerplate</h2>
+          <p>Copy/Paste these bits of code into <b>&#60;section&#62;</b> to set up two-column layouts in the section of your choice, then fill with your own content.</p>
+          <p>Image on the right:</p>
+        <pre>
+&#60;div class="flex-columns"&#62;
+  &#60;div class="flex-text"&#62;
+    &#60;p&#62;Text here&#60;/p&#62;
+  &#60;/div&#62;
+  &#60;div class="flex-image"&#62;
+    &#60;img src="img/"&#62;
+  &#60;/div&#62;
+&#60;/div&#62;</pre>
+          <p>Image on the left:</p>
+        <pre>
+&#60;div class="flex-columns"&#62;
+  &#60;div class="flex-image"&#62;
+    &#60;img src="img/"&#62;
+  &#60;/div&#62;
+  &#60;div class="flex-text"&#62;
+    &#60;p&#62;Text here&#60;/p&#62;
+  &#60;/div&#62;
+&#60;/div&#62;</pre>
+      </section>
+
+      <section id="preview-frame">
+        <h1>Preview frame</h1>
+        <p>A preview frame is great for linking a subpage or any other page with a little preview image next to the link and a description.</p>
+        <p>I'm currently using this to link to my art galleries, and I think it's neat!</p>
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/imagetest-square.jpg"></a>
+          <div>
+            <h3>Title</h3>
+            <p>This is an example of the Preview Frame with a square preview image.</p>
+          </div>
+        </div>
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/imagetest-16-9.jpg"></a>
+          <div>
+            <h3><a href="#preview-frame">You can make this title a link!</a></h3>
+            <p>This is an example of the Preview Frame with a 16:9 horizontal preview image. I recommend not making this image too wide. 16:9 is the widest recommended aspect ratio for inserting in a Preview Frame.</p>
+          </div>
+        </div>
+        <div class="preview-frame">
+          <a href="#preview-frame"><img src="img/imagetest-4-3-v.jpg"></a>
+          <div>
+            <h3><a href="#preview-frame">Another example</a></h3>
+            <p>This is an example of the Preview Frame with a 4:3 vertical preview image. I recommend not making this image too long. 4:3 is the tallest recommended aspect ratio for inserting in a Preview Frame. </p>
+          </div>
+        </div>
+        <h2>Boilerplate</h2>
+          <p>Copy/Paste this bit of code into <b>&#60;section&#62;</b> to set up a preview frame, then fill with your own image and content.</p>
+<pre>&lt;div&nbsp;class=&quot;preview&#45;frame&quot;&gt;
+&nbsp;&nbsp;&lt;a&nbsp;href=&quot;#preview&#45;frame&quot;&gt;&lt;img&nbsp;src=&quot;img/&quot;&gt;&lt;/a&gt;
+&nbsp;&nbsp;&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Title&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Description&lt;/p&gt;
+&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</pre>
+      </section>
+
+      <section id="image-grid">
+        <h1>Image grid</h1>
+        <p>A deceptively simple grid of images.</p>
+        <div class="gallery">
+            <img src="img/imagetest-square.jpg">
+            <img src="img/imagetest-4-3-v.jpg">
+            <img src="img/imagetest-4-3.jpg">
+            <img src="img/imagetest-16-9.jpg">
+            <img src="img/imagetest-square.jpg">
+        </div>
+        <p>To change image grid settings, look for these <span class="selector">:root settings</span> in the CSS file:</p>
+<pre>/* gallery settings */
+  <span class="property">--columnCount</span>: <span class="value">2</span>;
+  <span class="property">--columnGap</span>: <span class="value">8px</span>;</pre>
+  <ul>
+    <li><span class="property">--columnCount</span> is the number of columns.</li>
+    <li><span class="property">--columnGap</span> is the space between the images.</li>
+  </ul>
+        <h2>Boilerplate</h2>
+          <p>Copy/Paste this bit of code into a <b>&#60;section&#62;</b> to set up an image gallery, and complete with your own image file names.</p>
+<pre>
+&lt;div&nbsp;class=&quot;gallery&quot;&gt;
+&nbsp;&nbsp;&lt;img&nbsp;src=&quot;img/&quot;&gt;
+&nbsp;&nbsp;&lt;img&nbsp;src=&quot;img/&quot;&gt;
+&nbsp;&nbsp;&lt;img&nbsp;src=&quot;img/&quot;&gt;
+&nbsp;&nbsp;&lt;img&nbsp;src=&quot;img/&quot;&gt;
+&lt;div&gt;
+</pre>
+      </section>
+
+      <section id="lists">
+        <h1>Lists</h1>
+        <p>I don't know about you, but I love lists, and I use different types of lists for different purposes.</p>
+        <h2>Arrow lists</h2>
+        <p>The <b>arrow list</b> is an unordered list with an arrow instead of the usual round marker in front of the list items.</p>
+        <p>I use arrow lists for listing thoughts, sentences that are loosely related to each other... and sometimes just because it looks cool.</p>
+        <p>For example:</p>
+          <ul class="arrow-list">
+            <li>Here's a thing.</li>
+            <li>Here's a second thing.</li>
+            <li>Here's a third thing.</li>
+          </ul>
+        <p>To turn a list into an arrow list, simply type <code>class="arrow-list"</code> within the &#60;ul&#62; tag, so it looks like:</p>
+        <pre>&#60;ul class="arrow-list"&#62;
+  &#60;li&#62;Here's a thing.&#60;/li&#62;
+  &#60;li&#62;Here's a second thing.&#60;/li&#62;
+  &#60;li&#62;Here's a third thing.&#60;/li&#62;
+&#60;ul&#62;</pre>
+        <h2>To-do lists</h2>
+        <p>The <b>to-do list</b> is an unordered list with an box instead of the usual round marker in front of the list items.</p>
+        <p>I use to-do lists for, well, listing tasks I want done. And when I'm done with them, I can tick them off!</p>
+        <p>For example:</p>
+          <ul class="todo-list">
+            <li>Send letter</li>
+            <li>Water plants</li>
+            <li class="task-done">Make dinner</li>
+          </ul>
+        <p>To turn a list into an arrow list, simply type <code>class="todo-list"</code> within the &#60;ul&#62; tag, so it looks like:</p>
+        <pre>&#60;ul class="todo-list"&#62;
+  &#60;li&#62;Send letter&#60;/li&#62;
+  &#60;li&#62;Water plants&#60;/li&#62;
+  &#60;li&#62;Make dinner&#60;/li&#62;
+&#60;ul&#62;</pre>
+        <p>To mark a list item as "done", add <code>class="task-done"</code> within the &#60;li&#62; tag:</p>
+<pre>&#60;ul class="todo-list"&#62;
+  &#60;li&#62;Send letter&#60;/li&#62;
+  &#60;li&#62;Water plants&#60;/li&#62;
+  &#60;li class="task-done"&#62;Make dinner&#60;/li&#62;
+&#60;ul&#62;</pre>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>debtdeath / 2023</p><p><a href="sitemap.html">sitemap</a></p>
+    <p class="template-credits"><a href="../../templates.html">TEMPLATE: (C) CC-LINK</a></p>
+  </footer>
+
+</body>
+
+<!-- Mirrored from debtdeath.neocities.org/templates/cc-link/manual by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 21 Jul 2025 17:42:26 GMT -->
+</html>
